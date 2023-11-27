@@ -1,8 +1,12 @@
 
 import { useEffect } from 'react';
 import './App.css';
+import useTelegram from './hooks/useTelegram';
+import Header from './components/Header/Header';
+
 
 function App() {
+  const { tg, onClose } = useTelegram();
 
   useEffect(() => {
     tg.ready();
@@ -11,6 +15,7 @@ function App() {
   return (
     <div className="App">
       hello world
+      <Header />
       <button onClick={onClose}>Close</button>
     </div>
   );
