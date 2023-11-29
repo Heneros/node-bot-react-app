@@ -22,7 +22,7 @@ export default function ProductList() {
   }
 
   const [addedItems, setAddedItems] = useState([]);
-  const [tg, queryId] = useTelegram();
+  const {tg, queryId} = useTelegram();
 
   const onSendData = useCallback(() => {
     const data = {
